@@ -1,4 +1,3 @@
-
 from datetime import datetime
 import time
 
@@ -18,6 +17,7 @@ def header():
     print("📊 Plan Smart • Save Smart • Grow Smart")
     print("=" * 70)
     print(f"📅 Date & Time : {datetime.now().strftime('%d-%m-%Y %H:%M:%S')}")
+    print("🔖 Version     : v1.1")
     print("=" * 70)
 
 def get_float(message):
@@ -272,6 +272,7 @@ def savings_goal():
     print(f"Target Amount       : ₹{target:,.2f}")
     print(f"Months Available    : {months}")
     print(f"Monthly Saving Need : ₹{monthly:,.2f}")
+    print("💡 Tip: Automate this saving via SIP for consistency.")
     print("-" * 50)
 
 
@@ -327,4 +328,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
