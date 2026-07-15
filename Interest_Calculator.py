@@ -32,6 +32,13 @@ def get_float(message):
             print("Invalid input. Please enter a valid number.")
 
 
+def financial_tip():
+    print("\n💡 FINANCIAL TIP OF THE DAY")
+    print("-" * 50)
+    print("Try to save at least 20% of your monthly income.")
+    print("Small savings today can become big investments tomorrow!")
+    print("-" * 50)
+
 # ============================================================
 # INTEREST CALCULATORS
 # ============================================================
@@ -53,7 +60,7 @@ def simple_interest():
     print(f"Interest Earned  : ₹{interest:,.2f}")
     print(f"Final Amount     : ₹{total:,.2f}")
     print("-" * 50)
-
+    financial_tip()
 
 def compound_interest():
     print("\n--- COMPOUND INTEREST CALCULATOR ---")
