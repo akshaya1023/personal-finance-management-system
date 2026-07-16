@@ -1,6 +1,6 @@
-
 from datetime import datetime
 import time
+
 
 def loading():
     print("\n⏳ Processing", end="")
@@ -8,6 +8,7 @@ def loading():
         time.sleep(0.5)
         print(".", end="", flush=True)
     print("\n")
+
 
 # ============================================================
 # PERSONAL FINANCE MANAGEMENT SYSTEM
@@ -19,6 +20,7 @@ def header():
     print("=" * 70)
     print(f"📅 Date & Time : {datetime.now().strftime('%d-%m-%Y %H:%M:%S')}")
     print("=" * 70)
+
 
 def get_float(message):
     while True:
@@ -39,9 +41,11 @@ def financial_tip():
     print("Small savings today can become big investments tomorrow!")
     print("-" * 50)
 
+
 # ============================================================
 # INTEREST CALCULATORS
 # ============================================================
+
 
 def simple_interest():
     print("\n--- SIMPLE INTEREST CALCULATOR ---")
@@ -61,6 +65,7 @@ def simple_interest():
     print(f"Final Amount     : ₹{total:,.2f}")
     print("-" * 50)
     financial_tip()
+
 
 def compound_interest():
     print("\n--- COMPOUND INTEREST CALCULATOR ---")
@@ -109,11 +114,9 @@ def emi_calculator():
     monthly_rate = annual_rate / 1200
     months = years * 12
 
-    emi = (
-        principal
-        * monthly_rate
-        * ((1 + monthly_rate) ** months)
-    ) / (((1 + monthly_rate) ** months) - 1)
+    emi = (principal * monthly_rate * ((1 + monthly_rate) ** months)) / (
+        ((1 + monthly_rate) ** months) - 1
+    )
 
     total_payment = emi * months
     interest = total_payment - principal
@@ -184,6 +187,7 @@ def interest_menu():
 # BUDGET ANALYSIS
 # ============================================================
 
+
 def budget_analysis():
     print("\n--- BUDGET ANALYSIS ---")
 
@@ -214,6 +218,7 @@ def budget_analysis():
 # ============================================================
 # BUSINESS CALCULATORS
 # ============================================================
+
 
 def profit_loss():
     print("\n--- PROFIT / LOSS CALCULATOR ---")
@@ -265,6 +270,7 @@ def discount_calculator():
 # SAVINGS GOAL
 # ============================================================
 
+
 def savings_goal():
     print("\n--- SAVINGS GOAL PLANNER ---")
 
@@ -285,6 +291,7 @@ def savings_goal():
 # ============================================================
 # MAIN MENU
 # ============================================================
+
 
 def main():
     while True:
@@ -334,4 +341,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
