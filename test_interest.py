@@ -131,8 +131,8 @@ def test_get_float_invalid_then_valid(mock_input, capsys):
 
     assert result == 100.0
     assert "Invalid input" in output
-    
-    
+
+
 @patch("builtins.input", side_effect=["-10", "50"])
 def test_get_float_negative_then_valid(mock_input, capsys):
     result = Interest_Calculator.get_float("Enter:")
@@ -141,8 +141,8 @@ def test_get_float_negative_then_valid(mock_input, capsys):
 
     assert result == 50.0
     assert "Please enter a positive value" in output
-    
-    
+
+
 @patch("Interest_Calculator.loading")
 @patch("builtins.input", side_effect=["100000", "50000"])
 def test_budget_analysis_excellent(mock_input, mock_loading, capsys):
@@ -151,8 +151,8 @@ def test_budget_analysis_excellent(mock_input, mock_loading, capsys):
     output = capsys.readouterr().out
 
     assert "Excellent" in output
-    
-    
+
+
 @patch("Interest_Calculator.loading")
 @patch("builtins.input", side_effect=["100000", "95000"])
 def test_budget_analysis_needs_improvement(
@@ -165,8 +165,8 @@ def test_budget_analysis_needs_improvement(
     output = capsys.readouterr().out
 
     assert "Needs Improvement" in output
-    
-    
+
+
 @patch("Interest_Calculator.loading")
 @patch("builtins.input", side_effect=["100", "100"])
 def test_profit_loss_break_even(mock_input, mock_loading, capsys):
@@ -175,16 +175,16 @@ def test_profit_loss_break_even(mock_input, mock_loading, capsys):
     output = capsys.readouterr().out
 
     assert "No Profit No Loss" in output
-    
-    
+
+
 def test_header(capsys):
     Interest_Calculator.header()
 
     output = capsys.readouterr().out
 
     assert "PERSONAL FINANCE MANAGEMENT SYSTEM" in output
-    
-    
+
+
 @patch("builtins.input", side_effect=["99", "6"])
 def test_interest_menu_invalid_choice(mock_input, capsys):
     Interest_Calculator.interest_menu()
@@ -192,7 +192,7 @@ def test_interest_menu_invalid_choice(mock_input, capsys):
     output = capsys.readouterr().out
 
     assert "Invalid choice" in output
-    
+
 
 @patch("builtins.input", side_effect=["99", "", "6"])
 def test_main_invalid_choice(mock_input, capsys):
@@ -201,7 +201,7 @@ def test_main_invalid_choice(mock_input, capsys):
     output = capsys.readouterr().out
 
     assert "Invalid choice" in output
-    
+
 
 @patch("builtins.input", side_effect=["6"])
 def test_main_exit(mock_input, capsys):
