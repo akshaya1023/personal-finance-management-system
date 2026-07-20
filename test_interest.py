@@ -209,4 +209,4 @@ def test_main_exit(mock_input, capsys):
 
     output = capsys.readouterr().out
 
-    assert "Goodbye" in output
+    assert "Thank you for using Personal Finance Management System" in output
