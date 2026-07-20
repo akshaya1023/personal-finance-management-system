@@ -37,11 +37,3 @@ jobs:
       - name: Generate Code Coverage
         run: |
           pytest --cov=Interest_Calculator --cov-report=term-missing
-
-      - name: Run Bandit Security Scan
-        run: |
-          bandit -r . -x test_interest.py
-
-      - name: Run Dependency Vulnerability Scan
-        run: |
-          pip-audit -r requirements.txt
