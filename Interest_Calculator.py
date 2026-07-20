@@ -330,7 +330,6 @@ def main():
             print("💰 Keep saving, keep investing, and keep growing.")
             print("📈 Every rupee invested today builds a better tomorrow.")
             print("🌟 Wishing you financial success ahead.")
-            print("👋 Goodbye!")
             break
 
         else:
