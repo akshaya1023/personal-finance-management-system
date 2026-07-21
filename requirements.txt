@@ -1,4 +1,4 @@
 black==26.5.1
 ruff==0.15.22
-pytest==9.1.1
+pytest==8.0.0
 pytest-cov==7.1.0
